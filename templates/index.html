@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores do Maranhão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-pattern {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .delivery-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-amber-600">Sabores do Maranhão</a>
+            <div class="hidden md:flex space-x-10">
+                <a href="#inicio" class="text-gray-700 hover:text-amber-600 transition">Início</a>
+                <a href="#sobre" class="text-gray-700 hover:text-amber-600 transition">Sobre</a>
+                <a href="#cardapio" class="text-gray-700 hover:text-amber-600 transition">Cardápio</a>
+                <a href="#delivery" class="text-gray-700 hover:text-amber-600 transition">Delivery</a>
+                <a href="#localizacao" class="text-gray-700 hover:text-amber-600 transition">Localização</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pt-2 pb-4">
+            <a href="#inicio" class="block py-2 text-gray-700">Início</a>
+            <a href="#sobre" class="block py-2 text-gray-700">Sobre</a>
+            <a href="#cardapio" class="block py-2 text-gray-700">Cardápio</a>
+            <a href="#delivery" class="block py-2 text-gray-700">Delivery</a>
+            <a href="#localizacao" class="block py-2 text-gray-700">Localização</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-pattern min-h-screen flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Sabores Autênticos do Maranhão</h1>
+            <p class="text-xl md:text-2xl mb-8">Experiência gastronômica com os sabores mais tradicionais do nosso estado</p>
+            <button class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition">Ver Cardápio</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nossa História</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1585937421612-6a2d3cfc2a4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Cozinha tradicional" class="rounded-lg shadow-xl">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Tradição desde 1985</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Nossa cozinha representa a verdadeira essência da gastronomia maranhense, com receitas 
+                        passadas por gerações e ingredientes selecionados diretamente dos produtores locais.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Cada prato conta uma história e transporta nossos clientes para as festas tradicionais 
+                        e para a rica cultura do nosso estado através do paladar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="cardapio" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nosso Cardápio</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <!-- Appetizers -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Entradas</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md menu-item p-6">
+                        <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Bolinho de arroz" class="w-full h-48 object-cover rounded-t-lg">
+                        <h4 class="text-xl font-bold mt-4">Bolinho de Arroz</h4>
+                        <p class="text-gray-600 mt-2">Bolinho crocante de arroz com recheio de camarão</p>
+                        <p class="text-amber-600 font-bold mt-3">R$ 18,90</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md menu-item p-6">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Casquinha de siri" class="w-full h-48 object-cover rounded-t-lg">
+                        <h4 class="text-xl font-bold mt-4">Casquinha de Siri</h4>
+                        <p class="text-gray-600 mt-2">Siri desfiado refogado com temperos da casa</p>
+                        <p class="text-amber-600 font-bold mt-3">R$ 22,90</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md menu-item p-6">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Pastel de camarão" class="w-full h-48 object-cover rounded-t-lg">
+                        <h4 class="text-xl font-bold mt-4">Pastel de Camarão</h4>
+                        <p class="text-gray-600 mt-2">Massa fina recheada com camarão e queijo</p>
+                        <p class="text-amber-600 font-bold mt-3">R$ 16,90</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Courses -->
+            <div data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Pratos Principais</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md menu-item p-6">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1481&q=80" 
+                             alt="Arroz de cuxá" class="w-full h-48 object-cover rounded-t-lg">
+                        <h4 class="text-xl font-bold mt-4">Arroz de Cuxá</h4>
+                        <p class="text-gray-600 mt-2">Prato típico com vinagreira e camarão seco</p>
+                        <p class="text-amber-600 font-bold mt-3">R$ 42,90</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md menu-item p-6">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Peixe assado" class="w-full h-48 object-cover rounded-t-lg">
+                        <h4 class="text-xl font-bold mt-4">Peixe Assado na Folha</h4>
+                        <p class="text-gray-600 mt-2">Peixe temperado com ervas e assado na folha de bananeira</p>
+                        <p class="text-amber-600 font-bold mt-3">R$ 56,90</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md menu-item p-6">
+                        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" 
+                             alt="Caranguejada" class="w-full h-48 object-cover rounded-t-lg">
+                        <h4 class="text-xl font-bold mt-4">Caranguejada</h4>
+                        <p class="text-gray-600 mt-2">Caranguejos cozidos no tempero maranhense</p>
+                        <p class="text-amber-600 font-bold mt-3">R$ 68,90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="py-20 delivery-gradient text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Delivery</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold mb-6">Peça em Casa</h3>
+                    <p class="mb-6 leading-relaxed">
+                        Agora você pode saborear nossas delícias no conforto da sua casa. 
+                        Entregamos em toda a região metropolitana.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="mr-3"></i>
+                            <span>Entregas rápidas e seguras</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="mr-3"></i>
+                            <span>Embalagens especiais para manter a temperatura</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check-circle" class="mr-3"></i>
+                            <span>Pagamento online ou na entrega</span>
+                        </li>
+                    </ul>
+                    <button class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Fazer Pedido
+                    </button>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1581495309191-080ebdd447c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Entrega de comida" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="localizacao" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Onde Estamos</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="bg-gray-200 h-96 rounded-lg">
+                        <!-- Map placeholder - substituir pelo mapa real depois -->
+                        <div class="w-full h-full flex items-center justify-center bg-gray-300 rounded-lg">
+                            <i data-feather="map-pin" class="w-16 h-16 text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Venha nos Visitar</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-start">
+                            <i data-feather="map-pin" class="mr-4 mt-1"></i>
+                            <span>Rua da Paz, 123 - Centro, São Luís - MA</span>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i data-feather="clock" class="mr-4"></i>
+                            <span>Segunda a Sábado: 11h às 23h | Domingo: 12h às 22h</span>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="mr-4"></i>
+                            <span>(98) 3214-5678</span>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="mr-4"></i>
+                            <span>contato@saboresdomaranhao.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">Estacionamento</h4>
+                        <p class="text-gray-600">Oferecemos estacionamento gratuito para clientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Sabores do Maranhão</h4>
+                    <p class="text-gray-400">A autêntica culinária maranhense em cada prato.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition">Sobre</a></li>
+                        <li><a href="#cardapio" class="text-gray-400 hover:text-white transition">Cardápio</a></li>
+                        <li><a href="#delivery" class="text-gray-400 hover:text-white transition">Delivery</a></li>
+                        <li><a href="#localizacao" class="text-gray-400 hover:text-white transition">Localização</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Horário de Funcionamento</h4>
+                    <p class="text-gray-400">Segunda a Sábado: 11h às 23h</p>
+                    <p class="text-gray-400">Domingo: 12h às 22h</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Sabores do Maranhão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize animations and icons
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
